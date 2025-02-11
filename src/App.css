@@ -1,0 +1,109 @@
+/* Color Palette inspired by Kaffe Fassett */
+    :root {
+      --primary-color: #D84315; /* Burnt Orange */
+      --secondary-color: #7CB342; /* Lime Green */
+      --accent-color: #FDD835; /* Mustard Yellow */
+      --background-color: #F5F5F5; /* Light Gray */
+      --text-color: #333333; /* Dark Gray */
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: var(--background-color);
+      color: var(--text-color);
+      margin: 0;
+    }
+
+    .App {
+      text-align: center;
+    }
+
+    header {
+      background-color: var(--primary-color);
+      padding: 20px;
+      color: white;
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    .hero {
+      /* Use the imported variables */
+      background-image: url(./assets/quilt1.jpg), url(./assets/quilt2.jpg), url(./assets/quilt3.jpg);
+      background-size: cover;
+      background-position: center;
+      height: 500px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add text shadow for better readability */
+      animation: backgroundScroll 20s linear infinite; /* Add animation */
+    }
+
+    @keyframes backgroundScroll {
+      0% {
+        background-position: 0% 50%, 100% 50%, 0% 50%;
+      }
+      100% {
+        background-position: 100% 50%, 0% 50%, 100% 50%;
+      }
+    }
+
+    .hero h2 {
+      font-size: 3em;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.5em;
+      margin-bottom: 30px;
+    }
+
+    .hero button {
+      padding: 15px 30px;
+      font-size: 1.2em;
+      background-color: var(--secondary-color);
+      color: var(--text-color);
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .about,
+    .services,
+    .contact {
+      padding: 20px;
+      background-color: white;
+      margin-bottom: 20px;
+      border-radius: 5px;
+    }
+
+    .services ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .services li {
+      margin-bottom: 10px;
+    }
+
+    footer {
+      background-color: var(--primary-color);
+      padding: 10px;
+      color: white;
+      text-align: center;
+    }

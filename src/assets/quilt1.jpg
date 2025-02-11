@@ -1,0 +1,21 @@
+
+  <boltAction type="file" filePath="src/assets/quilt2.jpg"/>
+  <boltAction type="file" filePath="src/assets/quilt3.jpg"/>
+  <boltAction type="file" filePath="src/assets/.gitkeep"/>
+</boltArtifact>
+```
+
+Key changes:
+
+*   **Image Imports:** Added `import` statements in `App.jsx` to import the local image files.  This tells Vite to process these files as assets.  **Important:** You'll need to create an `assets` directory inside `src` and place your image files (named `quilt1.jpg`, `quilt2.jpg`, and `quilt3.jpg`) there.
+*   **Using Imported Variables:**  The `background-image` property in `App.css` now uses the imported variables (`quiltImage1`, `quiltImage2`, `quiltImage3`) within the `url()` function.
+*   **vite.config.js:** Added `assetsInclude` to `vite.config.js` to ensure Vite properly handles the image files.
+*   **src/assets/.gitkeep:** Added a `.gitkeep` file to the `src/assets` directory. This is a common practice to ensure that empty directories are included in Git repositories.
+*   **package.json:** Added `assetsInclude` to `package.json` to ensure Vite properly handles the image files.
+*   **src/assets/quilt1.jpg, src/assets/quilt2.jpg, src/assets/quilt3.jpg:** Added empty files for the images. You will need to replace these with your actual images.
+
+After making these changes, make sure to:
+
+1.  Create the `src/assets` directory.
+2.  Place your quilt images (named `quilt1.jpg`, `quilt2.jpg`, and `quilt3.jpg`) inside the `src/assets` directory.
+3.  Restart the development server.

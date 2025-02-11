@@ -1,0 +1,15 @@
+.about-page {
+    padding: 20px;
+    text-align: left;
+  }
+
+  .about-page h2 {
+    font-size: 2em;
+    margin-bottom: 15px;
+  }
+
+  .about-page p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 10px;
+  }
